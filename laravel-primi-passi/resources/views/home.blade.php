@@ -6,7 +6,7 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Hello World!
-    </h1>
+    <h1>{{ $name }}</h1>
+    <h2>{{ $surname }}</h2>
 </body>
 </html>
