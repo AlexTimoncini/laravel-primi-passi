@@ -6,7 +6,17 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>{{ $name }}</h1>
-    <h2>{{ $surname }}</h2>
+    <header>
+        <nav>
+            <ul>
+                @foreach ($navItems as $item)
+                <li>
+                    <a href="{{ route($item) }}">{{ $item }}</a>
+                </li>
+                @endforeach
+            </ul>
+        </nav>
+    </header>
+
 </body>
 </html>

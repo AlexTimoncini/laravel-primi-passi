@@ -14,6 +14,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = ['name' => 'mario', 'surname' => 'luigi'];
+    $data = [
+        'navItems' => [
+            'home',
+            'about-us',
+            'spiderman',
+            'nowayhome'
+        ]
+    ];
     return view('home', $data);
-});
+})->name('home');
+
+Route::get('/about-us', function () {
+
+    return view('about-us');
+})->name('about-us');
+
+Route::get('/spiderman', function () {
+
+    return view('spiderman');
+})->name('spiderman');
+
+Route::get('/nowayhome', function () {
+
+    return view('nowayhome');
+})->name('nowayhome');
